@@ -105,7 +105,7 @@ Special thanks to **Creativa Hub Fayoum** and **Dev Arena** for empowering young
 For inquiries, feedback, or collaboration:
 
 * 📧 **Mazen Abd El-Tawwab** — [mazen110.net@gmail.com](mailto:mazen110.net@gmail.com)
-* 📧 **Mohamed Abd El-Nasser** — (Add email if desired)
+* 📧 **Mohamed Abd El-Nasser** — [peskohere@gmail.com](mailto:peskohere@gmail.com)
 
 ---
 

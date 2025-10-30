@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do Web</title>
+
+    <!--Link Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!--Link Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Link Style Sheet-->
+    <link rel="stylesheet" href="/style/important.css" />
+
+    <!--Link Scripts-->
+    <script src="/scripts/important.js" defer></script>
+  </head>
+  <body>
+
+
+    <div class="main">
+        <div class="sidebar-cont">
+        <div class="top-cont">
+          <h1>MyDay Web</h1>
+        </div>
+        <div class="navi-cont">
+            
+          <ul>
+            
+            <li>
+              <a href="index.html" style="text-transform: capitalize; color: black">
+                <img src="/icons/homeicon.svg" alt="" /> my day</a
+              >
+            </li>
+            <li>
+              <a href="important.html" style="text-transform: capitalize; color: black">
+                <img src="/icons/importanticon.svg" alt="" /> important</a
+              >
+            </li>
+            <li>
+              <a href="planned.html" style="text-transform: capitalize; color: black">
+                <img src="/icons/plannedicon.svg" alt="" /> planned</a
+              >
+            </li>
+            <li>
+              <a href="alltasks.html" style="text-transform: capitalize; color: black">
+                <img src="/icons/tasksicon.svg" alt="" /> all tasks</a
+              >
+            </li>
+            <div class="animation-mov starting-point"></div>
+          </ul>
+        </div>
+        </div>
+
+
+        <div class="obj-cont">
+            <div class="main-content">
+                <div class="top-container">
+                    <div class="left-side">
+                        <div class="lf-img">
+                            <img src="/icons/starIcon.svg" alt="">  
+                        </div>
+                        
+                        <div class="lf-details" >
+                            <h1 style="font-size: 24px; color: #0A0A0A; font-weight: 600; height: 36px; display: flex; align-items: center;
+                            ">Important</h1>
+                            <p class="importantCounter" style="font-size: 14px; color: #737373; font-weight: 400; height: 21px; width: 150%;">Error.</p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <button class="addingTask" style="display: flex; align-items: center; justify-content: center; gap: 8px;"">
+                        <img src="/icons/plusicon.svg" alt="">Add Task</button>
+                        </div>
+                </div>
+
+                <div class="mid-container">
+                    <div class="filled" style="display: flex; justify-content: space-between;">
+                        <p style="color: #737373;">Progress</p>
+                        <p class="importantStatus" style="color: #0A0A0A;">0 of 5 completed</p>
+                    </div>
+                </div>
+
+                <div class="bot-container">
+                                <ul>
+                                
+                                <!--Tasks Added Here-->
+                                
+                                </ul>
+                </div>
+            </div>   
+        </div>
+
+        <div class="tasking-menu">
+          <div class="card">
+            <div class="upper-half">
+              <div class="dialogHeader">
+                <h1 style="font-size: 18px; font-weight: 600;">Add New Task</h1>
+                <p style="font-size: 14px; font-weight: 400; color: #737373;">Create a new task with details like priority, tags, and due date</p>
+              </div>
+              <span class="exitTaskBtn"><img src="/icons/exitIcon.svg" alt=""></span>
+            </div>
+            <form action="">
+<div class="lower-half">
+              <div class="title-container">
+                <div class="title-card" style="display: flex; gap: 7.2px; align-items: center;">
+                  <label for="title" style="font-size: 14px; font-weight: 500;">Title</label>
+                  <span style="color: red;">*</span>
+                </div>
+                <div class="inpt-card">
+                  <input type="text" id="title" required class="add-input" placeholder="What do you want to do?">
+                </div>
+                <p style="font-weight: 400; font-size: 16px; color: #737373;">Press Enter to add, Shift+Enter to add and stay open</p>
+              </div>
+
+
+              <div class="description-container">
+                <div class="description-card" style="display: flex;  align-items: center;">
+                  <label for="description" style="font-size: 14px; font-weight: 500;">Description</label>
+                </div>
+                
+                <div class="inpt-card">
+                  <textarea name="" id="description" cols="58" rows="4" placeholder="Add more details..." style="padding: 8px 12px; resize: none;"></textarea>
+                </div>
+               
+              </div>
+
+              <div class="duedate-container" style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="duedate-card" style="display: flex;  align-items: center;">
+                  <label for="duedate" style="font-size: 14px; font-weight: 500;">Due Date</label>
+                </div>
+                
+                <div class="inpt-card">
+                  <input type="date" id="duedate" required style="padding-right: 12px; padding-left: 12px; border-radius: 8px; border: .8px solid #E5E5E5; height: 41.6px;" name="" id="">
+                </div>
+               
+                <p style="font-weight: 400; font-size: 16px; color: #737373;">Pick a date or choose Today / Tomorrow</p>
+              </div>
+
+              <div class="typeoftask-container" style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="typeoftask-card" style="display: flex;  align-items: center;">
+                  <label for="typeoftask" style="font-size: 14px; font-weight: 500;">Choose Category</label>
+                </div>
+                
+                <div class="tpyediv" style="display: flex; flex-direction: column;">
+                    <select name="typeoftask"  id="typeoftask" style="width: 100%; height: 48px; background-color: #F5F5F5; border-radius: 8px; padding: 4px 4.01px 0 4px;">
+                      <option value="personal">personal</option>
+                      <option value="work">work</option>
+                    </select>
+                </div>
+               
+                <p style="font-weight: 400; font-size: 16px; color: #737373;">Choose the category of your task</p>
+              </div>
+
+              <div class="sumbit-container" style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="btns" style="display: flex; gap: 30px;">
+                  <button class="sumbit-btn" type="submit" style="width: 100%; height: 36px; border-radius: 6px; background-color: #22c55e; color: white; padding: 8px 16px; outline: none; border: none; cursor: pointer;">Sumbit</button>
+                  <button class="cancel-btn" style="width: 80.08px; height: 36px; border-radius: 6px; color: black; padding: 8px 16px; outline: none; border: none; cursor: pointer;">Cancel</button>
+                </div>
+                  <div class="addfavdiv" style="display: flex; align-items: center; gap: 7.2px;">
+                    <span style="text-transform: capitalize; font-weight: 400; font-size: 14px;">wished as favourite by default</span>
+                  </div>
+              </div> 
+            </div>
+            </form>
+            
+
+          </div>
+        </div>
+    </div>
+
+
+  </body>
+</html>

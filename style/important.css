@@ -1,0 +1,360 @@
+*{
+    /*Setup Default Settings*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+    font-family: "Inter", sans-serif;
+}
+
+/*Main Settings*/
+:root{
+    /*Main Colors*/
+    --bg-navi-primary: #FAFAFA;
+    --brdr-navi-primary: #D4D4D8;
+    --hvring-navi-color: #F5F5F5;
+}
+
+/*=========================*/
+
+.main {
+    display: flex;
+}
+
+
+/*Sidebar Customization*/
+.sidebar-cont {
+    width: 256px;
+    height: 100vh;
+    background-color: var(--bg-navi-primary);
+    flex-shrink: 0;
+    border: .8px solid var(--brdr-navi-primary);
+}
+
+.top-cont {
+    width: 100%;
+    height: 93.8px;
+    padding: 24px 24px .8px 24px;
+    background-color: var(--bg-navi-primary);
+    border: .8px solid var(--brdr-navi-primary);
+
+}
+.top-cont h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.navi-cont{
+    padding: 16px;
+}
+.navi-cont ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.navi-cont ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    height: 40px !important;
+    border-radius: 8px;
+    z-index: 1001;
+}
+
+/*Handling Hover*/
+
+.navi-cont ul li:nth-child(1):hover ~ .animation-mov {
+    top: 0px;
+}
+
+.starting-point {
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--hvring-navi-color);
+    border-radius: 8px;
+    transition: .6s ease all;
+    z-index: 100;
+}
+
+.navi-cont ul li:nth-child(3):hover ~ .animation-mov {
+    top: 104px;
+}
+.navi-cont ul li:nth-child(4):hover ~ .animation-mov {
+    top: 156px;
+}
+/*==============End of Handling Hover===============*/
+
+.navi-cont ul li {
+    padding-left: 12px;
+    height: 40px;
+}
+.navi-cont ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/*=========================================*/
+
+
+/*main container Customize*/
+.obj-cont {
+    width: 100%;
+    height: 100vh;
+}
+
+.obj-cont .main-content {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.obj-cont .main-content .top-container {
+    width: 100%;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.obj-cont .main-content .top-container .left-side .lf-img {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(150deg, #FFB900 , #FE9A00);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.obj-cont .main-content .top-container .left-side{
+    display: flex;
+    width: 188.8px;
+    height: 100%;
+    align-items: center;
+    gap: 12px;
+}
+.obj-cont .main-content .top-container .right-side button{
+    background-color: #22C55E;
+    border: none;
+    width: 110.3px;
+    height: 36px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .6s ease all;
+}
+.obj-cont .main-content .top-container .right-side button:hover{
+    background-color: #22c55eb3;
+}
+
+
+.obj-cont .main-content .mid-container {
+    width: 100%;
+    height: 57.6px;
+    padding: 16.8px 16.8px .8px 16.8px;
+    border-radius: 8px;
+    border: .8px solid #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bot-container {
+    overflow-y: scroll;
+}
+
+.bot-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 5px;
+
+}
+
+.bot-container ul  li{
+    height: 79.6px;
+    padding: 16.8px 16.8px .8px 16.8px;
+    border-radius: 8px;
+    border: .8px solid #E5E5E5;
+
+}
+
+.bot-container ul li .tasklist {
+    display: flex;
+    height: 46px;
+    gap: 12px;
+    align-items: center;
+}
+
+.bot-container ul li .tasklist .checky {
+    width: 16px; 
+    height: 16px; 
+    border: .8px solid #E5E5E5; 
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease all;
+}
+
+.active-checky {
+    background-color: #171717;
+}
+
+.styledCheckyContent {
+    color: red;
+}
+
+.bot-container ul li .tasklist .favstarbtn {
+    width: 20px; 
+    height: 20px; 
+    color: #FFB900;
+}
+
+
+.bot-container ul li .tasklist .taskdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+.bot-container ul li .tasklist .taskdetails .taskstatus,
+.bot-container ul li .tasklist .taskdetails .taskstatus .taskstatus-rt{
+    display: flex;
+}
+.bot-container ul li .tasklist .taskdetails .taskstatus{
+    gap: 12px;
+}
+.bot-container ul li .tasklist .taskdetails .taskstatus .taskstatus-rt{
+    gap: 4px;
+}
+
+.obj-cont .main-content .mid-container,
+.obj-cont .main-content .bot-container ul li{
+    transition: .3s ease-out all;
+}
+
+.obj-cont .main-content .mid-container:hover,
+.obj-cont .main-content .bot-container ul li:hover {
+   box-shadow: 1px 0px 13px 4px rgba(0,0,0,0.25);
+-webkit-box-shadow: 1px 0px 13px 4px rgba(0,0,0,0.25);
+-moz-box-shadow: 1px 0px 13px 4px rgba(0,0,0,0.25);
+}
+
+
+
+/*==========================================*/
+
+
+/*Poper Task Menu*/
+
+.tasking-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(74, 71, 71, 0.407);
+    position: absolute;
+    z-index: 100001;
+    display: none;
+    
+    
+}
+
+.tasking-menu .card {
+    position: relative;
+    width: 512.2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: -1px 2px 9px 3px rgba(0,0,0,0.22);
+    -webkit-box-shadow: -1px 2px 9px 3px rgba(0,0,0,0.22);
+    -moz-box-shadow: -1px 2px 9px 3px rgba(0,0,0,0.22);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+.tasking-menu .card .dialogHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.tasking-menu .card .upper-half {
+    display: flex;
+}
+.tasking-menu .card .upper-half span {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.tasking-menu .card .upper-half span:hover {
+    scale: 1.1;
+    rotate: 20deg;
+}
+
+.tasking-menu .card .lower-half {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+.tasking-menu .card .lower-half .title-container,
+.tasking-menu .card .lower-half .description-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tasking-menu .card .lower-half .description-container textarea {
+    border: .8px solid #E5E5E5;
+    padding: 4px 12px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.tasking-menu .card .lower-half .inpt-card input {
+    width: 100%;
+    height: 36px;
+
+    border: .8px solid #E5E5E5;
+    padding: 4px 12px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.sumbit-btn,.cancel-btn{
+    transition: .3s ease all !important;
+}
+.sumbit-btn:hover {
+    background-color: hsla(142, 71%, 45%, 0.573) !important;
+}
+.cancel-btn:hover {
+    background-color: hsla(0, 0%, 43%, 0.679) !important;
+    color: rgba(235, 228, 228, 0.935);
+    
+}
+
+/*======================================*/
